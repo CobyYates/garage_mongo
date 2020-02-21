@@ -13,7 +13,7 @@
                             <article class="card product-item">
                                 <header class="card__header">
                                     <h1 class="product__title">
-                                        <%= product.year product.make product.model %>
+                                        <%= product.year + " " + product.make + " " + product.model %>
                                     </h1>
                                 </header>
                                 <!-- <div class="card__image">
@@ -21,7 +21,7 @@
                                 </div> -->
                                 <div class="card__content">
                                     <p class="product__year">
-                                        <%= product.year product.make product.model %>
+                                        <%= product.year + " " + product.make + " " + product.model %>
                                     </p>
                                     <p class="product__price">
                                         $<%= product.price %>
