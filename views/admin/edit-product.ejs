@@ -9,58 +9,50 @@
 
     <main>
         <form class="product-form" action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST">
-            <div class="form-control">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" value="<% if (editing) { %><%= product.title %><% } %>">
-            </div>
             <!-- <div class="form-control">
                 <label for="imageUrl">Image URL</label>
                 <input type="text" name="imageUrl" id="imageUrl" value="<% if (editing) { %><%= product.imageUrl %><% } %>">
             </div> -->
             <div class="form-control">
                 <label for="price">Year</label>
-                <input type="number" name="year" id="year" step="0.01" value="<% if (editing) { %><%= product.year %><% } %>">
+                <input type="text" name="year" id="year" value="<% if (editing) { %><%= product.year %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Make</label>
-                <input type="text" name="make" id="make" step="0.01" value="<% if (editing) { %><%= product.make %><% } %>">
+                <input type="text" name="make" id="make" value="<% if (editing) { %><%= product.make %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Model</label>
-                <input type="text" name="model" id="model" step="0.01" value="<% if (editing) { %><%= product.model %><% } %>">
+                <input type="text" name="model" id="model" value="<% if (editing) { %><%= product.model %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Torque</label>
-                <input type="number" name="torque" id="torque" step="0.01" value="<% if (editing) { %><%= product.torque %><% } %>">
+                <input type="string" name="torque" id="torque" value="<% if (editing) { %><%= product.torque %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Engine</label>
-                <input type="text" name="engine" id="engine" step="0.01" value="<% if (editing) { %><%= product.engine %><% } %>">
+                <input type="text" name="engine" id="engine" value="<% if (editing) { %><%= product.engine %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Sixty</label>
-                <input type="number" name="sixty" id="sixty" step="0.01" value="<% if (editing) { %><%= product.sixty %><% } %>">
+                <input type="string" name="sixty" id="sixty" value="<% if (editing) { %><%= product.sixty %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Top Speed</label>
-                <input type="number" name="topSpeed" id="topSpeed" step="0.01" value="<% if (editing) { %><%= product.topSpeed %><% } %>">
+                <input type="string" name="topSpeed" id="topSpeed" value="<% if (editing) { %><%= product.topSpeed %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" step="0.01" value="<% if (editing) { %><%= product.price %><% } %>">
+                <input type="string" name="price" id="price" value="<% if (editing) { %><%= product.price %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Horse Power</label>
-                <input type="number" name="hp" id="hp" step="0.01" value="<% if (editing) { %><%= product.hp %><% } %>">
+                <input type="string" name="hp" id="hp" value="<% if (editing) { %><%= product.hp %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Weight</label>
-                <input type="number" name="weight" id="weight" step="0.01" value="<% if (editing) { %><%= product.weight %><% } %>">
+                <input type="string" name="weight" id="weight" value="<% if (editing) { %><%= product.weight %><% } %>">
             </div>
-            <!-- <div class="form-control">
-                <label for="description">Description</label>
-                <textarea name="description" id="description" rows="5"><% if (editing) { %><%= product.description %><% } %></textarea>
-            </div> -->
             <% if (editing) { %>
                 <input type="hidden" value="<%= product._id %>" name="productId">
             <% } %>

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
   year: {
-    type: Number,
+    type: String,
     required: true
   },
   make: {
