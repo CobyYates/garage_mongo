@@ -47,15 +47,3 @@ const productSchema = new Schema({
 });
 
 module.exports = mongoose.model('Product', productSchema);
-
-
-  // const year = req.body.year;
-  // const make = req.body.make;
-  // const model = req.body.model;
-  // const torque = req.body.torque;
-  // const engine = req.body.engine;
-  // const sixty = req.body.sixty;
-  // const topSpeed = req.body.topSpeed;
-  // const price = req.body.price;
-  // const hp = req.body.hp;
-  // const weight = req.body.weight;

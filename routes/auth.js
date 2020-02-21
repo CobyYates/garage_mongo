@@ -1,3 +1,4 @@
+// this page has been updated COMPLETE Before testing
 const express = require('express');
 
 const authController = require('../controllers/auth');

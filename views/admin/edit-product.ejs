@@ -1,3 +1,4 @@
+<!-- Complete other than testing -->
 <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/product.css">
@@ -12,18 +13,54 @@
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" value="<% if (editing) { %><%= product.title %><% } %>">
             </div>
-            <div class="form-control">
+            <!-- <div class="form-control">
                 <label for="imageUrl">Image URL</label>
                 <input type="text" name="imageUrl" id="imageUrl" value="<% if (editing) { %><%= product.imageUrl %><% } %>">
+            </div> -->
+            <div class="form-control">
+                <label for="price">Year</label>
+                <input type="number" name="year" id="year" step="0.01" value="<% if (editing) { %><%= product.year %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Make</label>
+                <input type="text" name="make" id="make" step="0.01" value="<% if (editing) { %><%= product.make %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Model</label>
+                <input type="text" name="model" id="model" step="0.01" value="<% if (editing) { %><%= product.model %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Torque</label>
+                <input type="number" name="torque" id="torque" step="0.01" value="<% if (editing) { %><%= product.torque %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Engine</label>
+                <input type="text" name="engine" id="engine" step="0.01" value="<% if (editing) { %><%= product.engine %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Sixty</label>
+                <input type="number" name="sixty" id="sixty" step="0.01" value="<% if (editing) { %><%= product.sixty %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Top Speed</label>
+                <input type="number" name="topSpeed" id="topSpeed" step="0.01" value="<% if (editing) { %><%= product.topSpeed %><% } %>">
             </div>
             <div class="form-control">
                 <label for="price">Price</label>
                 <input type="number" name="price" id="price" step="0.01" value="<% if (editing) { %><%= product.price %><% } %>">
             </div>
             <div class="form-control">
+                <label for="price">Horse Power</label>
+                <input type="number" name="hp" id="hp" step="0.01" value="<% if (editing) { %><%= product.hp %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="price">Weight</label>
+                <input type="number" name="weight" id="weight" step="0.01" value="<% if (editing) { %><%= product.weight %><% } %>">
+            </div>
+            <!-- <div class="form-control">
                 <label for="description">Description</label>
                 <textarea name="description" id="description" rows="5"><% if (editing) { %><%= product.description %><% } %></textarea>
-            </div>
+            </div> -->
             <% if (editing) { %>
                 <input type="hidden" value="<%= product._id %>" name="productId">
             <% } %>

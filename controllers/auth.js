@@ -1,4 +1,4 @@
-// this page needs work to make sure that the user can create a new account?...
+// this page has been updated COMPLETE Before testing
 const bcrypt = require('bcryptjs');
 
 const User = require('../models/user');
