@@ -17,7 +17,7 @@ const User = require('./models/user');
 
 const app = express();
 const store = new MongoDBStore({
-  uri: process.env.MONGODB_URI,
+  uri: 'mongodb+srv://cober:test1234@cluster0-wd74s.mongodb.net/garage?retryWrites=true',
   collection: "sessions",
 });
 const csrfProtection = csrf();
@@ -72,7 +72,7 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect('mongodb+srv://cober:test1234@cluster0-wd74s.mongodb.net/garage?retryWrites=true')
   .then((result) => {
     app.listen(3000);
   })
