@@ -9,16 +9,15 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
 
+require('dotenv').config();
+
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI =
-  'mongodb+srv://cober:1234abcd@cluster0-wd74s.mongodb.net/garage?retryWrites=true';
-
 const app = express();
 const store = new MongoDBStore({
-  uri: MONGODB_URI,
-  collection: 'sessions'
+  uri: process.env.MONGODB_URI,
+  collection: "sessions",
 });
 const csrfProtection = csrf();
 
@@ -67,10 +66,10 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI)
-  .then(result => {
+  .connect(process.env.MONGODB_URI)
+  .then((result) => {
     app.listen(3000);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
   });
