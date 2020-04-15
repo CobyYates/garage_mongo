@@ -74,7 +74,7 @@ app.use(errorController.get404);
 mongoose
   .connect('mongodb+srv://cober:test1234@cluster0-wd74s.mongodb.net/garage?retryWrites=true')
   .then((result) => {
-    app.listen(3000);
+    app.listen(3001);
   })
   .catch((err) => {
     console.log(err);
