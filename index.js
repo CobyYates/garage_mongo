@@ -72,9 +72,10 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect('mongodb+srv://cober:test1234@cluster0-wd74s.mongodb.net/garage?retryWrites=true')
+  .connect('mongodb+srv://cober:test1234@cluster0-wd74s.mongodb.net/garage?retryWrites=true',
+    { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
-    app.listen(3001);
+    app.listen(process.env.PORT || 3001);
   })
   .catch((err) => {
     console.log(err);

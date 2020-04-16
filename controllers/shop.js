@@ -7,11 +7,6 @@ exports.getProducts = (req, res, next) => {
     .then(products => {
       console.log(products);
       res.json(products)
-      // res.render('shop/product-list', {
-      //   prods: products,
-      //   pageTitle: 'All Products',
-      //   path: '/products'
-      // });
     })
     .catch(err => {
       console.log(err);
@@ -23,11 +18,6 @@ exports.getProduct = (req, res, next) => {
   Product.findById(prodId)
     .then(product => {
       res.json(product)
-      // res.render('shop/product-detail', {
-      //   product: product,
-      //   pageTitle: product.title,
-      //   path: '/products'
-      // });
     })
     .catch(err => console.log(err));
 };
@@ -37,11 +27,6 @@ exports.getIndex = (req, res, next) => {
     .then(products => {
       console.log(products);
       res.json(products)
-      // res.render('shop/index', {
-      //   prods: products,
-      //   pageTitle: 'Shop',
-      //   path: '/'
-      // });
     })
     .catch(err => {
       console.log(err);
@@ -54,11 +39,11 @@ exports.getCart = (req, res, next) => {
     .execPopulate()
     .then(user => {
       const products = user.cart.items;
-      res.render('shop/cart', {
-        path: '/cart',
-        pageTitle: 'Your Cart',
-        products: products
-      });
+      // res.render('shop/cart', {
+      //   path: '/cart',
+      //   pageTitle: 'Your Cart',
+      //   products: products
+      // });
     })
     .catch(err => console.log(err));
 };
@@ -114,11 +99,11 @@ exports.postOrder = (req, res, next) => {
 exports.getOrders = (req, res, next) => {
   Order.find({ 'user.userId': req.user._id })
     .then(orders => {
-      res.render('shop/orders', {
-        path: '/orders',
-        pageTitle: 'Your Orders',
-        orders: orders
-      });
+      // res.render('shop/orders', {
+      //   path: '/orders',
+      //   pageTitle: 'Your Orders',
+      //   orders: orders
+      // });
     })
     .catch(err => console.log(err));
 };
